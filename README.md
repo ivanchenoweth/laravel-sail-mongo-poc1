@@ -44,6 +44,7 @@ Probe of concept of laravel with sail
 
 3.- Ready for work with laravel
 
+> You could access with the .env credentials (adminer.org file included)
 
 ## Following:
 
