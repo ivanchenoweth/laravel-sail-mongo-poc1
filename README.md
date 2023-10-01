@@ -7,7 +7,6 @@ Probe of concept of laravel with sail
 
 `curl -s https://laravel.build/example-app | bash``
 
-
 * 2.- Go to the example-app directory and run sail to execute up all cotainers
 
 `cd example-app`
@@ -25,7 +24,7 @@ Probe of concept of laravel with sail
 * You could stop the contaner with ./vendor/bin/sail down
 
 
-## Steps Using this repository
+## Steps Using this repository (codespaces or in your local environment)
 
 1.- Copy the file .env.example to .env, edit it making customization data, and backup it in a safe place.  
 
@@ -47,7 +46,7 @@ Probe of concept of laravel with sail
 
 > You could access with the .env credentials (adminer.org file included)
 
-## Following:
+## You could see:
 
 GitHub Codespaces Laravel. Instalation and first steps
 
