@@ -1,18 +1,18 @@
 # laravel-sail-poc1
 Probe of concept of laravel with sail 
 
-
 ## Steps from scratch (in a empty repository)
 
 * 1.- Go to codespaces and install example-app (5min)
 
 `curl -s https://laravel.build/example-app | bash``
 
+
 * 2.- Go to the example-app directory and run sail to execute up all cotainers
 
 `cd example-app`
 
-> NOTE: You could move all the example-app to the root if you want it
+> NOTE: You could move all the example-app to the root if you want it, and personalize docker-compose.yml
 
 `./vendor/bin/sail up -d`
 
@@ -21,7 +21,7 @@ Probe of concept of laravel with sail
 * You could disabled debug mode in the .env file.
 * You could edit and backup the .env file.
 * Migration has to be run inside of the container
-* The running container are the ones are in the docker-compose-yml
+* The running container are the ones are in the docker-compose-yml (It includes: mysql, redis, meilisearch, mailpit, selenium)
 * You could stop the contaner with ./vendor/bin/sail down
 
 
@@ -38,11 +38,12 @@ Probe of concept of laravel with sail
     laravelsail/php82-composer:latest \
     composer install --ignore-platform-reqs
 `
-2.- Execute the next command to go up all the containers
+
+3.- Execute the next command to go up all the containers
 
 `./vendor/bin/sail up -d`
 
-3.- Ready for work with laravel
+4.- Ready for work with laravel
 
 > You could access with the .env credentials (adminer.org file included)
 
