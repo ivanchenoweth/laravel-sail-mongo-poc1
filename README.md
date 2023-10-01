@@ -2,7 +2,7 @@
 Probe of concept of laravel with sail 
 
 
-## Steps installation from scratch (empty repository)
+## Steps from scratch (in a empty repository)
 
 * 1.- Go to codespaces and install example-app (5min)
 
@@ -11,6 +11,8 @@ Probe of concept of laravel with sail
 * 2.- Go to the example-app directory and run sail to execute up all cotainers
 
 `cd example-app`
+
+> NOTE: You could move all the example-app to the root if you want it
 
 `./vendor/bin/sail up -d`
 
@@ -23,6 +25,24 @@ Probe of concept of laravel with sail
 * You could stop the contaner with ./vendor/bin/sail down
 
 
+## Steps Using this repository
+
+1.- Copy the file .env.example to .env, edit it making customization data, and backup it in a safe place.  
+
+2.- Execute the next command to run/download containers and install laravel site
+
+`docker run --rm \
+    -u "$(id -u):$(id -g)" \
+    -v "$(pwd):/var/www/html" \
+    -w /var/www/html \
+    laravelsail/php82-composer:latest \
+    composer install --ignore-platform-reqs
+`
+2.- Execute the next command to go up all the containers
+
+`./vendor/bin/sail up -d`
+
+3.- Ready for work with laravel
 
 
 ## Following:
