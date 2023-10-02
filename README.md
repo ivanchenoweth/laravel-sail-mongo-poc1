@@ -3,11 +3,11 @@ Probe of concept of laravel with sail
 
 ## Branch laravel-sail-mongo-working 
 
-This branch is for work with laravel, sail and mongodb in codespaces (configured) or localy 
+This branch is for work with laravel, sail configured for mongodb in codespaces (configured) or localy (could be switched to mysql)
 
 > NOTE: to run the codespaces environment just execute:
 
-`vendor/bin/sail up 'd`
+`vendor/bin/sail up -d`
 
 
 ## Steps from scratch (in a empty repository)
