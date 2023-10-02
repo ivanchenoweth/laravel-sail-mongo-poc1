@@ -5,6 +5,11 @@ Probe of concept of laravel with sail
 
 This branch is for work with laravel, sail and mongodb in codespaces (configured) or localy 
 
+> NOTE: to run the codespaces environment just execute:
+
+`vendor/bin/sail up 'd`
+
+
 ## Steps from scratch (in a empty repository)
 
 * 1.- Go to codespaces and install example-app (5min)
