@@ -1,6 +1,12 @@
 # laravel-sail-poc1
 Probe of concept of laravel with sail 
 
+## Branch poc mongo 
+
+Tying to install and implement mongodb 
+
+https://www.cursosdesarrolloweb.es/blog/configurar-laravel-sail-y-mongo-db
+
 ## Steps from scratch (in a empty repository)
 
 * 1.- Go to codespaces and install example-app (5min)
@@ -30,13 +36,13 @@ Probe of concept of laravel with sail
 
 2.- Execute the next command to run/download containers and install laravel site
 
-`docker run --rm \
+docker run --rm \
     -u "$(id -u):$(id -g)" \
     -v "$(pwd):/var/www/html" \
     -w /var/www/html \
     laravelsail/php82-composer:latest \
     composer install --ignore-platform-reqs
-`
+
 
 3.- Execute the next command to go up all the containers
 
@@ -103,3 +109,5 @@ I disabled debug mode in the .env
 
 NOTE: Migrations has to be run inside of the container
         
+        
+php8.1-redis php8.1-swoole php8.1-xdebug php8.1-mongodb \
