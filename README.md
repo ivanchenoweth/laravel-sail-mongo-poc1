@@ -34,13 +34,14 @@ This branch is for work with laravel, sail and mongodb in codespaces (configured
 
 2.- Execute the next command to run/download containers and install laravel site
 
-docker run --rm \
-    -u "$(id -u):$(id -g)" \
-    -v "$(pwd):/var/www/html" \
-    -w /var/www/html \
-    laravelsail/php82-composer:latest \
+`
+docker run --rm 
+    -u "$(id -u):$(id -g)" 
+    -v "$(pwd):/var/www/html" 
+    -w /var/www/html 
+    laravelsail/php82-composer:latest 
     composer install --ignore-platform-reqs
-
+`
 
 3.- Execute the next command to go up all the containers
 
