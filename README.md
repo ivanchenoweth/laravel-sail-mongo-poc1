@@ -1,11 +1,9 @@
 # laravel-sail-poc1
 Probe of concept of laravel with sail 
 
-## Branch poc mongo 
+## Branch laravel-sail-mongo-working 
 
-Tying to install and implement mongodb 
-
-https://www.cursosdesarrolloweb.es/blog/configurar-laravel-sail-y-mongo-db
+This branch is for work with laravel, sail and mongodb in codespaces (configured) or localy 
 
 ## Steps from scratch (in a empty repository)
 
@@ -108,6 +106,5 @@ if (App::environment('production')) {
 I disabled debug mode in the .env
 
 NOTE: Migrations has to be run inside of the container
-        
         
 php8.1-redis php8.1-swoole php8.1-xdebug php8.1-mongodb \
