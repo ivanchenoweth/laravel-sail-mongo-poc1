@@ -1,21 +1,22 @@
-# laravel-sail-poc1
-Probe of concept of laravel with sail 
+# laravel-sail-mongo-poc1
 
-## Branch laravel-sail-mongo-working 
+Probe of concept 1 of laravel and mongo with sail updated - 2024
 
-This branch is for work with laravel, sail and mongodb in codespaces (configured) or localy 
+## Branch laravel-sail-mongo
 
-## Steps from scratch (in a empty repository)
+This branch is for work with laravel, sail, mongodb and mongo-express in codespaces (configured) or localy 
 
-* 1.- Go to codespaces and install example-app (5min)
+## Steps Using this repository (codespaces or in your local environment)
 
-`curl -s https://laravel.build/example-app | bash``
+1.- Copy the file .env.example to .env, edit it, making customization data, and backup it in a safe place.  
 
-* 2.- Go to the example-app directory and run sail to execute up all cotainers
+2.- Execute the next command to run/download containers and install laravel site
 
-`cd example-app`
+`
+docker run --rm -u "$(id -u):$(id -g)" -v "$(pwd):/var/www/html"  -w /var/www/html laravelsail/php82-composer:latest composer install --ignore-platform-reqs
+`
 
-> NOTE: You could move all the example-app to the root if you want it, and personalize docker-compose.yml
+3.- Execute the next command to go up all the containers
 
 `./vendor/bin/sail up -d`
 
@@ -24,28 +25,8 @@ This branch is for work with laravel, sail and mongodb in codespaces (configured
 * You could disabled debug mode in the .env file.
 * You could edit and backup the .env file.
 * Migration has to be run inside of the container
-* The running container are the ones are in the docker-compose-yml (It includes: mysql, redis, meilisearch, mailpit, selenium)
+* The running container are the ones are in the docker-compose-yml (Some other are commented like: mysql, redis, meilisearch, mailpit, selenium)
 * You could stop the contaner with ./vendor/bin/sail down
-
-
-## Steps Using this repository (codespaces or in your local environment)
-
-1.- Copy the file .env.example to .env, edit it making customization data, and backup it in a safe place.  
-
-2.- Execute the next command to run/download containers and install laravel site
-
-`
-docker run --rm 
-    -u "$(id -u):$(id -g)" 
-    -v "$(pwd):/var/www/html" 
-    -w /var/www/html 
-    laravelsail/php82-composer:latest 
-    composer install --ignore-platform-reqs
-`
-
-3.- Execute the next command to go up all the containers
-
-`./vendor/bin/sail up -d`
 
 4.- Ready for work with laravel
 
@@ -53,13 +34,13 @@ docker run --rm
 
 ## You could see:
 
-GitHub Codespaces Laravel. Instalation and first steps
+GitHub Codespaces Laravel. Install and first steps
 
 https://www.youtube.com/watch?v=hPDASavmNeo&ab_channel=JavierTer%C3%A1nGonz%C3%A1lez
 
 https://laravel.com/docs/9.x/installation/#getting-started-on-linux
 
-## TRUBLESHOOTINGS:
+## TROUBLESHOOTINGS:
 
 If accidentally you created a mysql volume by running sail without an .env file, which was persistent the whole time thus of course having no user and database configured.
 
