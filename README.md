@@ -2,9 +2,7 @@
 
 Probe of concept 1 of laravel and mongo with sail updated - 2024
 
-## Branch laravel-sail-mongo
-
-This branch is for work with laravel, sail, mongodb and mongo-express in codespaces (configured) or localy 
+Develop and training propose works with laravel, sail, mongodb and mongo-express in codespaces (configured) or localy 
 
 ## Steps Using this repository (codespaces or in your local environment)
 
