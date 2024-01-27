@@ -67,6 +67,46 @@ my solution:
 
 Run dockerd successfully!
 
+## TROUBLESHOOTS:
+
+Error: Call a member function prepare on null when register a new user?
+
+Codechange fix, replace the Authenticatable alias line:
+
+`
+	use MongoDB\Laravel\Auth\User as Authenticatable;
+`
+
+In the:
+
+`    
+	class User extends Authenticatable
+`
+
+Update .env file for codespace to show assets (CSS and images) properly add the next lines:
+
+
+APP_URL=http://localhost
+
+ASSET_URL=http://localhost
+
+
+In codespaces Go to your /Middleware/TrustProxies.php modify the $proxies line as follows:
+
+`
+protected $proxies = '*';
+`
+
+## Laravel breeze install and dependencies:
+
+`
+composer require laravel/breeze
+`
+
+`
+php artisan breeze:install api
+`
+
 ## Laravel URL and mempry problems:
 
 I suggest to use this in web.php 
