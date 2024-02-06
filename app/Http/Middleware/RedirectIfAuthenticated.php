@@ -21,7 +21,12 @@ class RedirectIfAuthenticated
 
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
-                return redirect(RouteServiceProvider::HOME);
+                // return redirect(RouteServiceProvider::HOME);
+                // https://github.com/platformsh-templates/laravel/issues/50
+                // https://stackoverflow.com/questions/74988485/fresh-laravel-sanctum-api-redirecting-to-dashboard-route
+                return response()->json(['message' => 'authenticated.'], 200);
+            } else {
+                return response()->json(['error' => 'Already authenticated.']);
             }
         }
 
